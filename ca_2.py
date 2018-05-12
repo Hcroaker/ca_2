@@ -22,7 +22,6 @@ def doCalculations(expression, operator):
         for i in range(len(expression)):
             if expression[i]==operator:
                 found = True;
-                print(expression)
                 answer = operations[operator](int(expression[i-1]), int(expression[i+1]))
                 expression = expression[:i-1] + [str(answer)] + expression[i+2:len(expression)]
                 calculations.append(expression)
